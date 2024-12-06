@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: linear-gradient(135deg, #6a11cb, #2575fc);
+        color: #333;
+      }
+
+      .contact-form {
+        background: #fff;
+        border-radius: 10px;
+        padding: 20px 30px;
+        width: 100%;
+        max-width: 400px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      }
+
+      .contact-form h2 {
+        margin-bottom: 20px;
+        color: #6a11cb;
+        text-align: center;
+        font-size: 24px;
+      }
+
+      .contact-form label {
+        display: block;
+        margin: 10px 0 5px;
+        font-size: 14px;
+        color: #555;
+      }
+
+      .contact-form input,
+      .contact-form textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        margin-bottom: 15px;
+        font-size: 14px;
+      }
+
+      .contact-form input:focus,
+      .contact-form textarea:focus {
+        border-color: #6a11cb;
+        outline: none;
+      }
+
+      .contact-form button {
+        width: 100%;
+        padding: 10px;
+        background: linear-gradient(135deg, #6a11cb, #2575fc);
+        border: none;
+        border-radius: 5px;
+        color: #fff;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+      }
+
+      .contact-form button:hover {
+        background: linear-gradient(135deg, #2575fc, #6a11cb);
+      }
+
+      .contact-form .note {
+        text-align: center;
+        font-size: 12px;
+        color: #777;
+        margin-top: 10px;
+      }
+
+      #success {
+        margin-top: 10px;
+        display: none;
+        color: green;
+        font-style: bold;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <form class="contact-form">
+      <h2>Contact Us</h2>
+      <label for="name">Name</label>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        placeholder="Your Name"
+        required
+      />
+
+      <label for="email">Email</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="Your Email"
+        required
+      />
+
+      <label for="message">Message</label>
+      <textarea
+        id="message"
+        name="message"
+        rows="5"
+        placeholder="Your Message"
+        required
+      ></textarea>
+
+      <button id="submit" type="submit">Submit</button>
+      <p id="success" class="note">Message Sent.</p>
+    </form>
+    <script src="main.js"></script>
+  </body>
+</html>
